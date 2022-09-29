@@ -43,8 +43,13 @@ module.exports = {
     new ModuleFederationPlugin({
       name: "host",
       filename: "remoteEntry.js",
-      remotes: {},
-      exposes: {},
+      remotes: {
+        counter: "mf_react_1@http://localhost:3000/remoteEntry.js",
+        card: "mf_react_2@http://localhost:3001/remoteEntry.js"
+      },
+      exposes: {
+        
+      },
       shared: {
         ...deps,
         react: {

@@ -44,7 +44,9 @@ module.exports = {
       name: "mf_react_2",
       filename: "remoteEntry.js",
       remotes: {},
-      exposes: {},
+      exposes: {
+        "./ScaleCard": "./src/ScaleCard.jsx"
+      },
       shared: {
         ...deps,
         react: {
